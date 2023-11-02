@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_instance" "foo" {
   ami                    = "ami-06791f9213cbb608b"
   instance_type          = "t2.micro"
-  key_name               = "my_keys"
+  key_name               = "newkey"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   user_data              = <<EOF
     #!/bin/bash
